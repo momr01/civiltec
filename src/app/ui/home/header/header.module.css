@@ -1,0 +1,57 @@
+.header {
+    @apply flex items-center justify-between w-full z-[100] fixed h-28;
+    /* @apply md:px-10;
+    @apply lg:px-20;
+    @apply 2xl:px-96; */
+  }
+  
+  .headerProjects {
+    @apply bg-white;
+  }
+  
+  .headerTransparent {
+    @apply bg-transparent;
+  }
+  
+  .headerScrolled {
+     @apply bg-opacity-50 bg-gray-800; 
+  /*  @apply bg-gray-500 transition duration-500 opacity-20;*/
+  
+  }
+  
+  .nav {
+    @apply flex items-center font-semibold px-7;
+    @apply lg:px-0;
+  }
+  
+  .navWhite {
+    @apply text-white;
+  }
+  
+  .navBlack {
+    @apply text-black;
+  }
+  
+  .logoLink {
+    @apply font-semibold w-28 ml-7;
+    @apply lg:w-80 lg:ml-0;
+  }
+  
+  .itemsContainer {
+    @apply hidden;
+    @apply lg:flex lg:items-center lg:gap-16;
+  }
+  
+  .navItem {
+    @apply hidden;
+    @apply lg:block;
+  }
+  
+  .navItemBtn {
+    @apply hover:underline hover:underline-offset-[10px];
+  }
+  
+  .burgerNav {
+    @apply lg:hidden;
+  }
+  

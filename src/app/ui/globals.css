@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
+ 
+} */
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+@font-face {
+  font-family: "PoppinsRegular";
+  src: url("../../assets/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "CodecProBold";
+  src: url("../../assets/fonts/Codec-Pro-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  @apply m-0 p-0 box-border;
+  font-family: "PoppinsRegular", sans-serif;
+}
+
+h2 {
+  @apply text-3xl mb-10 text-center uppercase;
+  @apply md:mb-14;
+}
+
+.containerBase {
+  @apply md:px-10;
+  @apply lg:px-20;
+  @apply 2xl:px-96;
+}
+
+section {
+  /* @apply p-10; */
+  @apply px-10 pt-32;
+  @apply lg:py-32;
+  @apply 2xl:py-32;
+  @apply containerBase;
+  @apply bg-white;
+}
+
+/* @layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+} */
