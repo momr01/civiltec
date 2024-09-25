@@ -1,10 +1,6 @@
 import React from "react";
 import { MdMarkEmailRead, MdPlace } from "react-icons/md";
-import {
-  RiFacebookBoxFill,
-  RiFacebookFill,
-  RiInstagramFill,
-} from "react-icons/ri";
+import { RiInstagramFill } from "react-icons/ri";
 import styles from "./contactInfo.module.css";
 import { HiPhone } from "react-icons/hi2";
 import { FaFacebook } from "react-icons/fa";

@@ -1,0 +1,82 @@
+.container {
+  @apply relative;
+}
+
+.burgerBtn {
+  @apply z-10 px-8;
+  @apply focus:outline-none;
+}
+
+.burgerBtnLines {
+  @apply w-8 h-1 transition duration-300 ease-in-out;
+}
+
+.burgerBtnLineBlack {
+  @apply bg-black;
+}
+
+.burgerBtnLineWhite {
+  @apply bg-white;
+}
+
+.burgerBtnLineMb {
+  @apply burgerBtnLines;
+  @apply mb-1;
+}
+
+.burgerBtnLineTransform {
+  @apply burgerBtnLineMb;
+  @apply transform;
+}
+
+.burgerLine1Open {
+  @apply rotate-45 translate-y-2;
+}
+
+.burgerLine2Open {
+  @apply opacity-0;
+}
+
+.burgerLine3Open {
+  @apply -rotate-45 -translate-y-2;
+}
+
+.overlayContainer {
+  @apply fixed inset-0 bg-gray-600 bg-opacity-50 transition-opacity duration-300;
+}
+
+.overlayOpen {
+  @apply opacity-100;
+}
+
+.overlayClose {
+  @apply opacity-0 pointer-events-none;
+}
+
+.menuContainer {
+  @apply fixed top-0 right-0 w-80 h-full bg-primary shadow-lg transition-transform duration-300 transform;
+}
+
+.menuOpen {
+  @apply translate-x-0;
+}
+
+.menuClose {
+  @apply translate-x-full;
+}
+
+.menuLogoContainer {
+  @apply w-[80%] mx-auto py-10;
+}
+
+.menuNav {
+  @apply flex flex-col items-center justify-start h-full mt-24;
+}
+
+.menuNavItem {
+  @apply mb-10;
+}
+
+.menuNavItem button {
+  @apply text-black text-xl;
+}

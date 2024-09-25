@@ -3,15 +3,14 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./header.module.css";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { navItems } from "@/data/navItems";
-import { logoWhite } from "@/assets/img/logo/logo";
+import { logoBlack, logoWhite } from "@/assets/img/logo/logo";
+import BurgerNav from "./burgerNav/burgerNav";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
   const router = useRouter();
-  const isProjectsPage = pathname.includes("proyectos");
 
   useEffect(() => {
     if (window.scrollY > 0) {
@@ -41,28 +40,15 @@ const Header = () => {
   return (
     <header
       className={`${styles.header} ${
-        !isProjectsPage
-          ? scrolled
-            ? styles.headerScrolled
-            : styles.headerTransparent
-          : styles.headerProjects
+        scrolled ? styles.headerScrolled : styles.headerTransparent
       } containerBase`}
     >
       <Link className={styles.logoLink} href={"/"}>
-         <Image
-          src={logoWhite}
-          alt="logo"
-          width={200}
-        /> 
-      
+        <Image src={scrolled ? logoBlack : logoWhite} alt="logo" width={200} />
       </Link>
       <nav
         className={`${styles.nav} ${
-          !isProjectsPage
-            ? scrolled
-              ? styles.navWhite
-              : styles.navWhite
-            : styles.navBlack
+          scrolled ? styles.navBlack : styles.navWhite
         } `}
       >
         <div className={styles.itemsContainer}>
@@ -78,10 +64,7 @@ const Header = () => {
         </div>
       </nav>
       <div className={styles.burgerNav}>
-        {/* <BurgerNav
-          navItems={navItems}
-          isProjectsPage={isProjectsPage}
-        /> */}
+        <BurgerNav navItems={navItems} scrolled={scrolled} />
       </div>
     </header>
   );

@@ -11,7 +11,6 @@ import {
   work08,
   work09,
 } from "@/assets/img/works/imgWorks";
-import { worksItems } from "@/data/worksItems";
 import { Masonry } from "@mui/lab";
 import Box from "@mui/material/Box";
 //import Label from '@mui/material/lab';
@@ -21,15 +20,15 @@ import React from "react";
 
 const Works = () => {
   // Configuración de columnas según el tamaño de pantalla
-  const breakpointColumnsObj = {
+  /* const breakpointColumnsObj = {
     default: 4, // Para pantallas grandes
     1100: 3, // Para pantallas medianas
     700: 2, // Para pantallas pequeñas
     500: 1, // Para pantallas muy pequeñas
-  };
+  };*/
 
   return (
-    <section>
+    <section id="works">
       <h2>Obras</h2>
       {/* <div
         className="grid grid-flow-dense gap-0 w-full h-full"
@@ -64,7 +63,12 @@ const Works = () => {
         </Masonry>
       </div> */}
 
-      <Box sx={{ width: "100%", minHeight: 829 }}>
+      <Box
+        sx={{
+          width: "100%",
+          //  minHeight: 829
+        }}
+      >
         <Masonry columns={3} spacing={1}>
           {itemData.map((item, index) => (
             <div key={index}>

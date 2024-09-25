@@ -1,42 +1,49 @@
-import { logoBlack } from '@/assets/img/logo/logo'
-import { mainCover, imgBack } from '@/assets/img/mainCover/mainCover'
-import Image from 'next/image'
-import React from 'react'
+"use client";
+import { logoBlack } from "@/assets/img/logo/logo";
+import { mainCover } from "@/assets/img/mainCover/mainCover";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
+import styles from "./cover.module.css";
 
 const Cover = () => {
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // Cambia el tamaño según tu breakpoint deseado
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Verificar el tamaño inicial
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
-    // <div className='h-[100vh] bg-gray-500'>
+    <div className={styles.container}>
+      {/* Fondo del div principal */}
+      <div className={styles.mainImgContainer}>
+        <Image src={mainCover} alt="civiltec" layout="fill" objectFit="cover" />
+      </div>
 
-    //     <Image src={mainCover} alt='civiltec' />
-    // </div>
-    <div className="relative w-full h-[100vh] bg-blue-500">
-    {/* Fondo del div principal */}
-    <div className="inset-0 w-full h-full overflow-hidden">
-    <Image src={mainCover} alt='civiltec' layout='fill' objectFit='cover'  />
-    </div>
-
-    {/* Fondo de la esquina inferior izquierda recortada */}
-    <div
-      className="absolute bottom-0 left-0 w-full h-full bg-black"
-   //   style={{ clipPath: 'polygon(0% 100%, 0% 50%, 50% 100%)', backgroundImage:  `url(${imgBack})`, }}
-   style={{ clipPath: 'polygon(0% 100%, 0% 50%, 50% 100%)', backgroundImage:  `url(./img/green-background.png)`,  backgroundSize: 'cover',       // Para que la imagen cubra el área
-    backgroundRepeat: 'no-repeat', // Evita que la imagen se repitas
-    backgroundPosition: 'center',  // Centra la imagen
-     }}
-    > 
-        <div className='absolute bottom-10 left-5 w-[40%] xl:w-[35%] 2xl:w-[30%]' >
-        <Image src={logoBlack} alt='logo'  />
+      {/* Fondo de la esquina inferior izquierda recortada */}
+      <div
+        className={
+          isMobile ? styles.coverUnderFigMobile : styles.coverUnderFigWeb
+        }
+      >
+        <div className={styles.logoContainer}>
+          <Image src={logoBlack} alt="logo" />
         </div>
-    
-  
-    </div>
+      </div>
 
-    {/* <div className="relative z-10 p-8 text-white">
+      {/* <div className="relative z-10 p-8 text-white">
       <h1 className="text-xl font-bold">Diagonal Corner Example</h1>
       <p>This div has a diagonal cut at the bottom-left corner with a different background.</p>
     </div> */}
-  </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Cover
+export default Cover;

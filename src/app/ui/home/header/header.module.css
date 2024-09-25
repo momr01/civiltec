@@ -1,21 +1,13 @@
 .header {
     @apply flex items-center justify-between w-full z-[100] fixed h-28;
-    /* @apply md:px-10;
-    @apply lg:px-20;
-    @apply 2xl:px-96; */
   }
-  
-  .headerProjects {
-    @apply bg-white;
-  }
-  
+
   .headerTransparent {
     @apply bg-transparent;
   }
   
   .headerScrolled {
-     @apply bg-opacity-50 bg-primary; 
-  /*  @apply bg-gray-500 transition duration-500 opacity-20;*/
+     @apply bg-primary transition duration-500; 
   
   }
   
@@ -33,7 +25,7 @@
   }
   
   .logoLink {
-    @apply font-semibold w-28 ml-7;
+    @apply font-semibold w-44 ml-7;
     @apply lg:w-80 lg:ml-0;
   }
   

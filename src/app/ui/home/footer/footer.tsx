@@ -1,11 +1,9 @@
 "use client";
 import React from "react";
-import { CustomFlowbiteTheme, Footer as FooterFBR } from "flowbite-react";
+import { Footer as FooterFBR } from "flowbite-react";
 import Image from "next/image";
 import { customThemeFooter } from "./customTheme";
-import { usePathname } from "next/navigation";
-import styles from "./footer.module.css";
-import { logoBlack, logoMOMR, logoWhite } from "@/assets/img/logo/logo";
+import { logoBlack, logoMOMR } from "@/assets/img/logo/logo";
 
 const Footer = () => {
   // const pathname = usePathname();

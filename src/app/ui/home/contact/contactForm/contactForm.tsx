@@ -44,6 +44,22 @@ const ContactForm = () => {
     });
   };
 
+  // Manejador de cambios en los textareas
+  const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+
+    // Validar el campo mientras el usuario escribe
+    setErrors({
+      ...errors,
+      [name]: validate(name, value),
+    });
+  };
+
   // Validar todo el formulario antes de enviar
   const validateForm = () => {
     const newErrors = {
@@ -133,6 +149,7 @@ const ContactForm = () => {
         throw new Error(response.message);
       }
     } catch (error) {
+      console.log(error);
       Swal.fire({
         icon: "error",
         title: "Error",
@@ -218,7 +235,7 @@ const ContactForm = () => {
             name="message"
             maxLength={500}
             value={formData.message}
-            onChange={handleInputChange}
+            onChange={handleTextareaChange}
           />
           {errors.message && (
             <p className={styles.errorText}>{errors.message}</p>
