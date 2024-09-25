@@ -2,9 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
- 
-} */
+:root {
+  --primary: 172, 206, 123;
+}
 
 /* @media (prefers-color-scheme: dark) {
   :root {
