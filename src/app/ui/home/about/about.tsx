@@ -7,8 +7,10 @@ import styles from "./about.module.css";
 const About = () => {
   return (
     <section className={styles.aboutSection}>
-      <Presentation />
-      <Numbers />
+      <article>
+        <Presentation />
+        <Numbers />
+      </article>
     </section>
   );
 };

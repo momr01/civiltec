@@ -2,17 +2,20 @@ const civiltecNumbers = [
   {
     id: 1,
     label: "Años de experiencia",
-    q: 10,
+    q: 30,
+    time: 2
   },
   {
     id: 2,
     label: "Proyectos",
-    q: 99,
+    q: 180,
+    time: 3
   },
   {
     id: 3,
     label: "m2 construidos",
-    q: 3000,
+    q: 12000,
+    time: 3
   },
 ];
 

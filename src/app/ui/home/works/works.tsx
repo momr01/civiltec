@@ -62,18 +62,18 @@ const Works = () => {
           ))}
         </Masonry>
       </div> */}
-
-      <Box
-        sx={{
-          width: "100%",
-          //  minHeight: 829
-        }}
-      >
-        <Masonry columns={3} spacing={1}>
-          {itemData.map((item, index) => (
-            <div key={index}>
-              {/* <Label>{index + 1}</Label> */}
-              {/* <img
+      <article>
+        <Box
+          sx={{
+            width: "100%",
+            //  minHeight: 829
+          }}
+        >
+          <Masonry columns={3} spacing={1}>
+            {itemData.map((item, index) => (
+              <div key={index}>
+                {/* <Label>{index + 1}</Label> */}
+                {/* <img
                 srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=162&auto=format`}
                 
@@ -86,26 +86,27 @@ const Works = () => {
                   width: "100%",
                 }}
               /> */}
-              <Image
-                // srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-                src={item.img}
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  borderBottomLeftRadius: 4,
-                  borderBottomRightRadius: 4,
-                  display: "block",
-                  width: "100%",
-                }}
-              />
-            </div>
-          ))}
-        </Masonry>
-      </Box>
+                <Image
+                  // srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                  src={item.img}
+                  alt={item.title}
+                  loading="lazy"
+                  style={{
+                    borderBottomLeftRadius: 4,
+                    borderBottomRightRadius: 4,
+                    display: "block",
+                    width: "100%",
+                  }}
+                />
+              </div>
+            ))}
+          </Masonry>
+        </Box>
 
-      <div className="flex justify-center mt-10">
-        <button className="w-1/3 bg-primary py-5">Ver más</button>
-      </div>
+        <div className="flex justify-center mt-10">
+          <button className="w-1/3 bg-primary py-5">Ver más</button>
+        </div>
+      </article>
     </section>
   );
 };

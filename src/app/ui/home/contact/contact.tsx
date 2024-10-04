@@ -7,10 +7,12 @@ const Contact = () => {
   return (
     <section id="contact" className="mb-20 lg:mb-0">
       <h2>Contacto</h2>
-      <div className={styles.partsContainer}>
-        <ContactInfo />
-        <ContactForm />
-      </div>
+      <article>
+        <div className={styles.partsContainer}>
+          <ContactInfo />
+          <ContactForm />
+        </div>
+      </article>
     </section>
   );
 };
