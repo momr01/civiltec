@@ -6,12 +6,15 @@ import styles from "./about.module.css";
 
 const About = () => {
   return (
-    <section className={styles.aboutSection}>
-      <article>
+    <div className="bg-mainGreen">
+ <section className={styles.aboutSection}>
+      <div className={styles.blueSection}>
         <Presentation />
         <Numbers />
-      </article>
+      </div>
     </section>
+    </div>
+   
   );
 };
 

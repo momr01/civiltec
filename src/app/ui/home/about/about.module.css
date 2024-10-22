@@ -1,3 +1,7 @@
 .aboutSection {
-    @apply flex flex-col gap-5;
+  @apply flex flex-col gap-5 rounded-b-[100px] z-20 bg-white;
+}
+
+.blueSection {
+  @apply bg-mainBlue px-10 pt-10 pb-20 rounded-[50px];
 }

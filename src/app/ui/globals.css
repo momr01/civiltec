@@ -3,15 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --primary: 172, 206, 123;
+  --green: #a4cb7c;
+  --greenDark: #007763;
+  --blue: #5a9dd5;
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
 
 @font-face {
   font-family: "PoppinsRegular";
@@ -35,50 +30,13 @@ html {
   @apply m-0 p-0 box-border;
   font-family: "PoppinsRegular", sans-serif;
 }
-body {
-  background-image: url("/img/green-background.png");
-}
 
-.h2ssssss {
-  @apply text-3xl mb-10 text-center uppercase;
-  @apply md:mb-14;
-}
-
-h2 {
-  background-image: url("/img/green-background.png");
-  @apply text-3xl mb-10 text-center uppercase;
-  @apply md:mb-14;
-}
-
-.containerBasesssss {
+.baseContainer {
   @apply md:px-10;
-  @apply lg:px-20;
-  @apply 2xl:px-96;
+  @apply lg:px-20 lg:py-20;
+  @apply 2xl:px-80;
 }
 
-.sectionsssss {
-  /* @apply p-10; */
-  @apply px-10 pt-32;
-  @apply lg:py-32;
-  @apply 2xl:py-32;
-  @apply containerBasesssss;
-  @apply bg-white;
+header, section {
+  @apply baseContainer;
 }
-
-section {
-  @apply bg-white;
-  @apply md:mx-10;
-  @apply lg:mx-20;
-  @apply 2xl:mx-80;
-  /* 2xl:p-16; */
-}
-
-section article {
-  @apply 2xl:px-16 2xl:pt-8 2xl:pb-16;
-}
-
-/* @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */

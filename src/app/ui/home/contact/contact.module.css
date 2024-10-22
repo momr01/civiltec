@@ -1,5 +1,5 @@
 .partsContainer {
-    @apply flex flex-col justify-around gap-5 border-t-4 border-primary pt-14;
+    @apply flex flex-col justify-around gap-5 border-t-4 border-mainGreen pt-14;
     @apply lg:flex-row;
   }
   

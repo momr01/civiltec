@@ -54,7 +54,7 @@
 }
 
 .menuContainer {
-  @apply fixed top-0 right-0 w-80 h-full bg-primary shadow-lg transition-transform duration-300 transform;
+  @apply fixed top-0 right-0 w-80 h-full bg-mainGreen shadow-lg transition-transform duration-300 transform;
 }
 
 .menuOpen {

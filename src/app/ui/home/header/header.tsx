@@ -38,35 +38,41 @@ const Header = () => {
   };
 
   return (
-    <header
-      className={`${styles.header} ${
-        scrolled ? styles.headerScrolled : styles.headerTransparent
-      } containerBase`}
-    >
-      <Link className={styles.logoLink} href={"/"}>
-        <Image src={scrolled ? logoBlack : logoWhite} alt="logo" width={200} />
-      </Link>
-      <nav
-        className={`${styles.nav} ${
-          scrolled ? styles.navBlack : styles.navWhite
-        } `}
+    
+      <header
+        className={`${styles.header} ${
+          scrolled ? styles.headerScrolled : styles.headerTransparent
+        } containerBase`}
       >
-        <div className={styles.itemsContainer}>
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleRedirect(item.href)}
-              className={styles.navItemBtn}
-            >
-              {item.title}
-            </button>
-          ))}
+        <Link className={styles.logoLink} href={"/"}>
+          <Image
+            src={scrolled ? logoBlack : logoWhite}
+            alt="logo"
+            width={200}
+          />
+        </Link>
+        <nav
+          className={`${styles.nav} ${
+            scrolled ? styles.navBlack : styles.navWhite
+          } `}
+        >
+          <div className={styles.itemsContainer}>
+            {navItems.map((item) => (
+              <button
+                key={item.id}
+                onClick={() => handleRedirect(item.href)}
+                className={styles.navItemBtn}
+              >
+                {item.title}
+              </button>
+            ))}
+          </div>
+        </nav>
+        <div className={styles.burgerNav}>
+          <BurgerNav navItems={navItems} scrolled={scrolled} />
         </div>
-      </nav>
-      <div className={styles.burgerNav}>
-        <BurgerNav navItems={navItems} scrolled={scrolled} />
-      </div>
-    </header>
+      </header>
+   
   );
 };
 

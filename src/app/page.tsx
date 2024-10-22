@@ -8,19 +8,18 @@ import Projects from "./ui/home/projects/projects";
 import Us from "./ui/home/us/us";
 import Works from "./ui/home/works/works";
 
-
 export default function Home() {
   return (
     <>
-    <Header />
-    <Cover />
-    <About />
-    <Projects />
-    <Works />
-    <Blog />
-    <Us />
-    <Contact />
-    <Footer />
+      <Header />
+      <Cover />
+      <About />
+      <Projects />
+      <Works />
+      <Blog />
+      <Us />
+      <Contact />
+      <Footer />
     </>
   );
 }

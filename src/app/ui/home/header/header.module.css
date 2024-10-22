@@ -1,8 +1,6 @@
 .header {
   @apply flex items-center justify-between w-full z-[100] fixed h-28;
-  @apply md:px-10;
-  @apply lg:px-20;
-  @apply 2xl:px-80;
+ 
 }
 
 .headerTransparent {
@@ -10,7 +8,7 @@
 }
 
 .headerScrolled {
-  @apply bg-blue-200 transition duration-500;
+  @apply bg-mainGreen transition duration-500;
 }
 
 .nav {
