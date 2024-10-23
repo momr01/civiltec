@@ -28,7 +28,7 @@
   }
   
   .cardContainerPrimary {
-    @apply border-primary;
+    @apply border-mainGreen;
   }
   
   .img {
