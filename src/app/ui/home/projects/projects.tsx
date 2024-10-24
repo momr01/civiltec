@@ -17,7 +17,7 @@ const Projects = () => {
 
       <ProjectsContainer limit={3} />
       <div className={styles.btnContainer}>
-        <BtnMore text="Ver más" onClick={handleNewPage} />
+        <BtnMore text="ver más" onClick={handleNewPage} moreHeight={true} moreWidth={false} />
       </div>
     </section>
   );

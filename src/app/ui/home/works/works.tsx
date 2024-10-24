@@ -114,7 +114,7 @@ const Works = () => {
           </Box>
 
           <div className="flex justify-center mt-10">
-            <BtnMore text="Ver más" onClick={handleNewPage} />
+            <BtnMore text="ver más" onClick={handleNewPage} moreHeight={true} moreWidth={false} />
           </div>
         </article>
       </section>
