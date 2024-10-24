@@ -1,22 +1,23 @@
+"use client";
+
 import React from "react";
 import MainTitle from "../../components/mainTitle/mainTitle";
 import ProjectsContainer from "../../projects/projectsContainer/projectsContainer";
+import BtnMore from "../../components/btnMore/btnMore";
+import styles from "./projects.module.css";
 
 const Projects = () => {
+  const handleNewPage = () => {
+    console.log("holis");
+  };
+
   return (
-    <section
-      id="projects"
-      className="border-2 border-black bg-gradient-to-b from-mainGreen from-0% via-[#CAE5D7] via-74% to-white to-100%"
-    >
-      <MainTitle text="proyectos" />
+    <section id="projects" className={styles.projectsSection}>
+      <MainTitle text="proyectos" color="black" />
 
       <ProjectsContainer limit={3} />
-      <div className="flex justify-center mt-10">
-        <button
-        // className={styles.btnMore} onClick={handleNewPage}
-        >
-          Ver más
-        </button>
+      <div className={styles.btnContainer}>
+        <BtnMore text="Ver más" onClick={handleNewPage} />
       </div>
     </section>
   );

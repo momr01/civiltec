@@ -16,6 +16,8 @@ import Box from "@mui/material/Box";
 //import Label from '@mui/material/lab';
 import Image from "next/image";
 import React from "react";
+import MainTitle from "../../components/mainTitle/mainTitle";
+import BtnMore from "../../components/btnMore/btnMore";
 //import Masonry from "react-masonry-css";
 
 const Works = () => {
@@ -27,10 +29,18 @@ const Works = () => {
     500: 1, // Para pantallas muy pequeñas
   };*/
 
+  const handleNewPage = () => {
+    console.log("buenas");
+  };
+
   return (
-    <section id="works">
-      <h2>Obras</h2>
-      {/* <div
+    <div className="bg-mainBlue">
+      <section
+        id="works"
+        className="pb-60 rounded-b-[100px] bg-white"
+      >
+        <MainTitle text="obras" color="black" />
+        {/* <div
         className="grid grid-flow-dense gap-0 w-full h-full"
         style={{ gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))" }}
       >
@@ -45,7 +55,7 @@ const Works = () => {
         ))}
       </div> */}
 
-      {/* <div className="border border-black h-[690px] overflow-hidden">
+        {/* <div className="border border-black h-[690px] overflow-hidden">
         <Masonry
           breakpointCols={breakpointColumnsObj}
           className="flex"
@@ -62,18 +72,18 @@ const Works = () => {
           ))}
         </Masonry>
       </div> */}
-      <article>
-        <Box
-          sx={{
-            width: "100%",
-            //  minHeight: 829
-          }}
-        >
-          <Masonry columns={3} spacing={1}>
-            {itemData.map((item, index) => (
-              <div key={index}>
-                {/* <Label>{index + 1}</Label> */}
-                {/* <img
+        <article>
+          <Box
+            sx={{
+              width: "100%",
+              //  minHeight: 829
+            }}
+          >
+            <Masonry columns={3} spacing={1}>
+              {itemData.map((item, index) => (
+                <div key={index}>
+                  {/* <Label>{index + 1}</Label> */}
+                  {/* <img
                 srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
                 src={`${item.img}?w=162&auto=format`}
                 
@@ -86,28 +96,29 @@ const Works = () => {
                   width: "100%",
                 }}
               /> */}
-                <Image
-                  // srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-                  src={item.img}
-                  alt={item.title}
-                  loading="lazy"
-                  style={{
-                    borderBottomLeftRadius: 4,
-                    borderBottomRightRadius: 4,
-                    display: "block",
-                    width: "100%",
-                  }}
-                />
-              </div>
-            ))}
-          </Masonry>
-        </Box>
+                  <Image
+                    // srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                    src={item.img}
+                    alt={item.title}
+                    loading="lazy"
+                    style={{
+                      borderBottomLeftRadius: 4,
+                      borderBottomRightRadius: 4,
+                      display: "block",
+                      width: "100%",
+                    }}
+                  />
+                </div>
+              ))}
+            </Masonry>
+          </Box>
 
-        <div className="flex justify-center mt-10">
-          <button className="w-1/3 bg-primary py-5">Ver más</button>
-        </div>
-      </article>
-    </section>
+          <div className="flex justify-center mt-10">
+            <BtnMore text="Ver más" onClick={handleNewPage} />
+          </div>
+        </article>
+      </section>
+    </div>
   );
 };
 

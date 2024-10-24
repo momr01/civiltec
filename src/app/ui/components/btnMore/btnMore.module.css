@@ -1,0 +1,3 @@
+.btn {
+  @apply bg-mainGreen w-1/3 h-16 font-bold hover:bg-greenDark hover:text-white transition-all ease-in-out duration-500;
+}

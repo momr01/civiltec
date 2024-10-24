@@ -1,8 +1,11 @@
 import React from "react";
+import MainTitle from "../../components/mainTitle/mainTitle";
+import BtnMore from "../../components/btnMore/btnMore";
 
 const Us = () => {
   return (
     <section id="us">
+      <MainTitle text="nosotros" color="black" />
       <h2>Nosotros</h2>
       <article>
         <div>
@@ -31,6 +34,7 @@ const Us = () => {
           </p>
         </div>
       </article>
+  
     </section>
   );
 };

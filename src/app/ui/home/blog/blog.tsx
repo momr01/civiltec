@@ -1,15 +1,12 @@
 import React from "react";
+import MainTitle from "../../components/mainTitle/mainTitle";
 
 const Blog = () => {
   return (
-    <section id="blog">
-      <h2>Blog</h2>
-      <article>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+    <section id="blog" className="bg-mainBlue">
+     <MainTitle text="blog" color="white" />
+      <article className="h-[1000px]">
+       
       </article>
     </section>
   );

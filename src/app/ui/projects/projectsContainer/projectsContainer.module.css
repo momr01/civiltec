@@ -10,6 +10,6 @@
   }
   
   .borderUnderTitle {
-    @apply border-t-4 border-mainGreen pt-14;
+    /* @apply border-t-4 border-mainGreen pt-14; */
   }
   

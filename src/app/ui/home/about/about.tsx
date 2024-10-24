@@ -7,14 +7,13 @@ import styles from "./about.module.css";
 const About = () => {
   return (
     <div className="bg-mainGreen">
- <section className={styles.aboutSection}>
-      <div className={styles.blueSection}>
-        <Presentation />
-        <Numbers />
-      </div>
-    </section>
+      <section className={styles.aboutSection}>
+        <div className={styles.blueSection}>
+          <Presentation />
+          <Numbers />
+        </div>
+      </section>
     </div>
-   
   );
 };
 

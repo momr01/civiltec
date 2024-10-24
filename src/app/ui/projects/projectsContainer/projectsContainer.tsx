@@ -4,18 +4,19 @@ import React from "react";
 import styles from "./projectsContainer.module.css";
 import { projects } from "@/data/projectsItems";
 import CardProject from "../cardProject/cardProject";
-import { usePathname } from "next/navigation";
+//import { usePathname } from "next/navigation";
 import { IProject } from "@/interfaces/iProjects";
 
 const ProjectsContainer = ({ limit }: { limit: number }) => {
-  const pathname = usePathname();
-  const isProjectsPage = pathname.includes("proyectos");
+ // const pathname = usePathname();
+  //const isProjectsPage = pathname.includes("proyectos");
 
   return (
     <div
-      className={`${styles.cardsContainer} ${
-        !isProjectsPage && styles.borderUnderTitle
-      }`}
+    className={styles.cardsContainer}
+    //   className={`${styles.cardsContainer} ${
+    //     !isProjectsPage && styles.borderUnderTitle
+    //   }`}
     >
       {projects
         //.filter((project) => project.isMain)
