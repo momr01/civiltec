@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import MainTitle from "../../components/mainTitle/mainTitle";
 import BtnMore from "../../components/btnMore/btnMore";
@@ -6,35 +8,19 @@ const Us = () => {
   return (
     <section id="us">
       <MainTitle text="nosotros" color="black" />
-      <h2>Nosotros</h2>
-      <article>
-        <div>
-          <p>
-            Aplicamos la tecnología, la suma de habilidades, métodos y procesos
-            que nos permitan Diseñar, Crear y Construir tus objetivos con apoyo
-            técnico desde el inicio del proyecto. Buscando satisfacer las
-            necesidades de nuestros clientes, optimizando y generando valor
-            agregado a los proyectos que realizamos.
-          </p>
-          <p>
-            Nos atraen los desafíos, generar obras de alto valor, no sólo
-            económico sino también humano y social.
-          </p>
-          <p>
-            Nuestros modelos son personalizados, ya que contamos con una oficina
-            de Arquitectura, por lo que diseñamos la casa que siempre soñaste
-            según tus necesidades.
-          </p>
-          <p>Hacemos toda la documentación y trámites municipales.</p>
-          <p>Hacemos la dirección técnica.</p>
-          <p>Construimos gestionando todos los recursos.</p>
-          <p>
-            Tenemos facilidades de pago y precios muy competitivos en el
-            mercado.
-          </p>
-        </div>
-      </article>
-  
+
+      <p className="uppercase text-lg text-center tracking-wider w-[80%] mx-auto font-semibold">
+        Nos atraen los desafíos, generar obras de alto valor, no sólo económico
+        sino también humano y social.
+      </p>
+      <div className="flex justify-center mt-20">
+        <BtnMore
+          text="más información"
+          onClick={() => console.log("mas")}
+          moreHeight={true}
+          moreWidth={false}
+        />
+      </div>
     </section>
   );
 };

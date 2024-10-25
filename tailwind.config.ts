@@ -14,6 +14,7 @@ const config: Config = {
         mainGreen: "var(--green)",
         mainBlue: "var(--blue)",
         greenDark: "var(--greenDark)",
+        blueDark: "var(--blueDark)",
       },
     },
   },

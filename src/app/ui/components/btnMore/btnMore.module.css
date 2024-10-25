@@ -1,3 +1,5 @@
 .btn {
-  @apply bg-mainGreen font-bold hover:bg-greenDark hover:text-white transition-all ease-in-out duration-500;
+  @apply font-bold hover:text-white transition-all ease-in-out duration-500;
 }
+
+/*204564*/
