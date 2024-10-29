@@ -20,7 +20,7 @@ const customThemeTextarea: CustomFlowbiteTheme["textarea"] = {
 
 const customThemeBtn: CustomFlowbiteTheme["button"] = {
   color: {
-    base: "bg-primary text-black hover:bg-gray-500 hover:text-white focus:bg-primary focus:text-black h-11 flex items-center",
+    base: "bg-mainGreen text-black hover:bg-greenDark hover:text-white focus:bg-primary focus:text-black h-11 flex items-center",
   },
 };
 

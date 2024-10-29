@@ -24,6 +24,7 @@ const BlogCard = () => {
           onClick={() => console.log("nada")}
           moreHeight={false}
           moreWidth={true}
+          isGreen={true}
         />
       </div>
     </div>

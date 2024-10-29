@@ -38,10 +38,10 @@ const ContactInfo = () => {
     <div
     //className="flex flex-col md:flex-row md:justify-around lg:flex-col lg:justify-normal"
     >
-      {/* <div className="mb-10 lg:mb-20">
+      <div className="mb-10">
         <h3 className="text-3xl mb-2">Hablemos</h3>
         <p className="text-lg">Enviame tu consulta:</p>
-      </div> */}
+      </div>
 
       <div className={styles.container}>
         {contactItems.map((contact) => (

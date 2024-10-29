@@ -229,7 +229,7 @@ const ContactForm = () => {
           <Textarea
             id="comment"
             placeholder="Agregar un mensaje..."
-            rows={6}
+            rows={8}
             theme={customThemeTextarea}
             color={errors.message ? "failure" : "base"}
             name="message"

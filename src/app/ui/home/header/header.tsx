@@ -48,7 +48,7 @@ const Header = () => {
           <Image
             src={scrolled ? logoBlack : logoWhite}
             alt="logo"
-            width={200}
+            // width={200}
           />
         </Link>
         <nav
