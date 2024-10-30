@@ -1,16 +1,16 @@
 "use client";
 
-import {
-  work01,
-  work02,
-  work03,
-  work04,
-  work05,
-  work06,
-  work07,
-  work08,
-  work09,
-} from "@/assets/img/works/imgWorks";
+// import {
+//   work01,
+//   work02,
+//   work03,
+//   work04,
+//   work05,
+//   work06,
+//   work07,
+//   work08,
+//   work09,
+// } from "@/assets/img/works/imgWorks";
 import { Masonry } from "@mui/lab";
 import Box from "@mui/material/Box";
 //import Label from '@mui/material/lab';
@@ -18,7 +18,14 @@ import Image from "next/image";
 import React from "react";
 import MainTitle from "../../components/mainTitle/mainTitle";
 import BtnMore from "../../components/btnMore/btnMore";
+import { importAllImages } from "@/lib/functions";
 //import Masonry from "react-masonry-css";
+// pages/tu-pagina.js
+
+//const images = importAllImages(require.context("./", false, /\.jpg$/));
+const images = importAllImages(
+  require.context("../../../../assets/img/works", false, /\.jpg$/)
+);
 
 const Works = () => {
   // Configuración de columnas según el tamaño de pantalla
@@ -35,10 +42,7 @@ const Works = () => {
 
   return (
     <div className="bg-mainBlue">
-      <section
-        id="works"
-        className="pb-60 rounded-b-[100px] bg-white"
-      >
+      <section id="works" className="pb-60 rounded-b-[100px] bg-white">
         <MainTitle text="obras" color="black" />
         {/* <div
         className="grid grid-flow-dense gap-0 w-full h-full"
@@ -80,42 +84,55 @@ const Works = () => {
             }}
           >
             <Masonry columns={3} spacing={1}>
-              {itemData.map((item, index) => (
-                <div key={index}>
-                  {/* <Label>{index + 1}</Label> */}
-                  {/* <img
-                srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-                src={`${item.img}?w=162&auto=format`}
-                
-                alt={item.title}
-                loading="lazy"
-                style={{
-                  borderBottomLeftRadius: 4,
-                  borderBottomRightRadius: 4,
-                  display: "block",
-                  width: "100%",
-                }}
-              /> */}
-                  <Image
-                    // srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
-                    src={item.img}
-                    alt={item.title}
-                    loading="lazy"
-                    style={{
-                      borderBottomLeftRadius: 4,
-                      borderBottomRightRadius: 4,
-                      display: "block",
-                      width: "100%",
-                    }}
-                  />
-                </div>
-              ))}
+              {/* {itemData.map((item, index) => ( */}
+              {Object.keys(images).map((key, index) => {
+                if (index >= 0 && index <= 10) {
+                  return (
+                    <div key={index}>
+                      {/* <Label>{index + 1}</Label> */}
+                      {/* <img
+srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+src={`${item.img}?w=162&auto=format`}
+
+alt={item.title}
+loading="lazy"
+style={{
+  borderBottomLeftRadius: 4,
+  borderBottomRightRadius: 4,
+  display: "block",
+  width: "100%",
+}}
+/> */}
+                      <Image
+                        // srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
+                        // src={item.img}
+                        // alt={item.title}
+                        key={index}
+                        // src={images[item].default.src}
+                        src={images[key]}
+                        alt={key}
+                        loading="lazy"
+                        style={{
+                          borderBottomLeftRadius: 4,
+                          borderBottomRightRadius: 4,
+                          display: "block",
+                          width: "100%",
+                        }}
+                      />
+                    </div>
+                  );
+                }
+              })}
             </Masonry>
           </Box>
 
           <div className="flex justify-center mt-10">
-            <BtnMore text="ver más" onClick={handleNewPage} moreHeight={true} moreWidth={false} 
-            isGreen={true}
+            <BtnMore
+              text="ver más"
+              onClick={handleNewPage}
+              moreHeight={true}
+              moreWidth={false}
+              isGreen={true}
             />
           </div>
         </article>
@@ -126,44 +143,44 @@ const Works = () => {
 
 export default Works;
 
-const itemData = [
-  {
-    img: work01,
-    title: "Fern",
-  },
-  {
-    img: work02,
-    title: "Snacks",
-  },
-  {
-    img: work03,
-    title: "Mushrooms",
-  },
-  {
-    img: work04,
-    title: "Tower",
-  },
-  {
-    img: work05,
-    title: "Sea star",
-  },
-  {
-    img: work06,
-    title: "Honey",
-  },
-  {
-    img: work07,
-    title: "Basketball",
-  },
-  {
-    img: work08,
-    title: "Breakfast",
-  },
-  {
-    img: work09,
-    title: "Tree",
-  },
-];
+// const itemData = [
+//   {
+//     img: work01,
+//     title: "Fern",
+//   },
+//   {
+//     img: work02,
+//     title: "Snacks",
+//   },
+//   {
+//     img: work03,
+//     title: "Mushrooms",
+//   },
+//   {
+//     img: work04,
+//     title: "Tower",
+//   },
+//   {
+//     img: work05,
+//     title: "Sea star",
+//   },
+//   {
+//     img: work06,
+//     title: "Honey",
+//   },
+//   {
+//     img: work07,
+//     title: "Basketball",
+//   },
+//   {
+//     img: work08,
+//     title: "Breakfast",
+//   },
+//   {
+//     img: work09,
+//     title: "Tree",
+//   },
+// ];
 
 // const itemData = [
 //   {

@@ -21,4 +21,18 @@ const capitalizeEveryLetter = (word: string): string => {
   return finalParagraph;
 };
 
-export { capitalizeEveryLetter, capitalizeFirstLetter };
+const importAllImages = (requireContext: __WebpackModuleApi.RequireContext) => {
+  // const images = {};
+  //const images: { [key: string]: any } = {};
+  //console.log(requireContext)
+  const images: Record<string, string> = {};
+  requireContext.keys().forEach((fileName) => {
+    // console.log(fileName)
+    const key = fileName.replace("./", "").replace(".jpg", "");
+    images[key] = requireContext(fileName);
+  });
+  //console.log(images)
+  return images;
+};
+
+export { capitalizeEveryLetter, capitalizeFirstLetter, importAllImages };
