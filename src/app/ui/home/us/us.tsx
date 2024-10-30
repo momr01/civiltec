@@ -19,6 +19,7 @@ const Us = () => {
           onClick={() => console.log("mas")}
           moreHeight={true}
           moreWidth={false}
+          isGreen={false}
         />
       </div>
     </section>

@@ -38,6 +38,12 @@ html {
   @apply 2xl:px-80;
 }
 
-header, section {
+section {
   @apply baseContainer;
+}
+
+header {
+  @apply md:px-10;
+  @apply lg:px-20;
+  @apply 2xl:px-80;
 }

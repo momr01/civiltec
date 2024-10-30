@@ -3,9 +3,6 @@
 import React from "react";
 import MainTitle from "../../components/mainTitle/mainTitle";
 import styles from "./blog.module.css";
-import Image from "next/image";
-import { ottero01 } from "@/assets/img/projects/ottero/imgOttero";
-import BtnMore from "../../components/btnMore/btnMore";
 import BlogCard from "./blogCard/blogCard";
 
 const Blog = () => {
