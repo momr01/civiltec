@@ -4,6 +4,7 @@ import React from "react";
 import MainTitle from "../../components/mainTitle/mainTitle";
 import styles from "./blog.module.css";
 import BlogCard from "./blogCard/blogCard";
+import { blogItems } from "@/data/blogItems";
 
 const Blog = () => {
   return (
@@ -21,9 +22,10 @@ const Blog = () => {
       </div>
 
       <div className="flex justify-around my-20">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {blogItems.map((item, index) => (
+          <BlogCard key={index} item={item} />
+        ))}
+       
       </div>
     </section>
   );
