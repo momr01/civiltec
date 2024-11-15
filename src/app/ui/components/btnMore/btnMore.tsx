@@ -8,12 +8,14 @@ const BtnMore = ({
   moreHeight,
   moreWidth,
   isGreen,
+  textIsWhite
 }: {
   text: string;
   onClick: MouseEventHandler;
   moreHeight: boolean;
   moreWidth: boolean;
   isGreen: boolean;
+  textIsWhite: boolean;
 }) => {
   return (
     <button
@@ -23,7 +25,7 @@ const BtnMore = ({
         isGreen
           ? "bg-mainGreen hover:bg-greenDark"
           : "bg-mainBlue hover:bg-blueDark"
-      }`}
+      } ${textIsWhite ? 'text-white' : 'text-black'}`}
       onClick={onClick}
     >
       {capitalizeFirstLetter(text)}

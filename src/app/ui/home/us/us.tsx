@@ -20,6 +20,8 @@ const Us = () => {
           moreHeight={true}
           moreWidth={false}
           isGreen={false}
+          textIsWhite={true}
+
         />
       </div>
     </section>

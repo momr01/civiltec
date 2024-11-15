@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./header.module.css";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { navItems } from "@/data/navItems";
 import { logoBlack, logoWhite } from "@/assets/img/logo/logo";
 import BurgerNav from "./burgerNav/burgerNav";
@@ -11,6 +11,8 @@ import BurgerNav from "./burgerNav/burgerNav";
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const isNotHomePage = pathname.includes("blog");
 
   useEffect(() => {
     if (window.scrollY > 0) {
@@ -38,41 +40,39 @@ const Header = () => {
   };
 
   return (
-    
-      <header
-        className={`${styles.header} ${
+    <header
+      className={`${styles.header} 
+        ${!isNotHomePage ? styles.headerTransparent : styles.headerScrolled}
+
+        ${
           scrolled ? styles.headerScrolled : styles.headerTransparent
         } containerBase`}
+    >
+      <Link className={styles.logoLink} href={"/"}>
+        <Image src={scrolled ? logoBlack : !isNotHomePage ? logoWhite : logoBlack} alt="logo" width={200} />
+     
+      </Link>
+      <nav
+        className={`${styles.nav}
+        ${!isNotHomePage ? styles.navWhite : styles.navBlack}
+        ${scrolled ? styles.navBlack : styles.navWhite} `}
       >
-        <Link className={styles.logoLink} href={"/"}>
-          <Image
-            src={scrolled ? logoBlack : logoWhite}
-            alt="logo"
-             width={200}
-          />
-        </Link>
-        <nav
-          className={`${styles.nav} ${
-            scrolled ? styles.navBlack : styles.navWhite
-          } `}
-        >
-          <div className={styles.itemsContainer}>
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => handleRedirect(item.href)}
-                className={styles.navItemBtn}
-              >
-                {item.title}
-              </button>
-            ))}
-          </div>
-        </nav>
-        <div className={styles.burgerNav}>
-          <BurgerNav navItems={navItems} scrolled={scrolled} />
+        <div className={styles.itemsContainer}>
+          {navItems.map((item) => (
+            <button
+              key={item.id}
+              onClick={() => handleRedirect(item.href)}
+              className={styles.navItemBtn}
+            >
+              {item.title}
+            </button>
+          ))}
         </div>
-      </header>
-   
+      </nav>
+      <div className={styles.burgerNav}>
+        <BurgerNav navItems={navItems} scrolled={scrolled} />
+      </div>
+    </header>
   );
 };
 
