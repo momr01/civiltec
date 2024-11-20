@@ -31,6 +31,7 @@ const blogItems = [
       proyectoBeth05,
       proyectoBeth06,
     ],
+    video: "/video/blog/proyectoBethVideo.mp4",
     createdAt: "2024-09-02T13:51:16.913+00:00",
   },
   {
@@ -43,6 +44,7 @@ const blogItems = [
       sistemaConstructivo03,
       sistemaConstructivo04,
     ],
+    video: "/video/blog/sistemaConstrutivoVideo.mp4",
     createdAt: "2024-09-02T13:51:16.913+00:00",
   },
   {
@@ -50,6 +52,7 @@ const blogItems = [
     order: 3,
     title: "soporte eléctrico",
     images: [soporteElectrico01, soporteElectrico02, soporteElectrico03],
+    video: "/video/blog/soporteElectricoVideo.mp4",
     createdAt: "2024-09-02T13:51:16.913+00:00",
   },
 ];

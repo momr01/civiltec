@@ -5,5 +5,6 @@ export interface IBlogItem {
   order: number;
   title: string;
   images: StaticImageData[];
+  video: string;
   createdAt: string;
 }
