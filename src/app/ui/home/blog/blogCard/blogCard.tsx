@@ -21,15 +21,7 @@ const BlogCard = ({ item }: { item: IBlogItem }) => {
       </h3>
       <div className="flex justify-center mb-3 items-end">
         <Link
-          href={{
-            pathname: `/blog/${item.id}`,
-            query: {
-              title: item.title,
-              images: JSON.stringify( item.images),
-              video: item.video,
-              createdAt: item.createdAt,
-            },
-          }}
+          href={`/blog/${item.id}`}
           className={`flex justify-center items-center font-bold hover:text-white transition-all ease-in-out duration-500 h-12 w-1/2 bg-mainGreen hover:bg-greenDark
             `}
         >

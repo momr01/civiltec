@@ -133,6 +133,7 @@ style={{
               moreHeight={true}
               moreWidth={false}
               isGreen={true}
+              textIsWhite={false}
             />
           </div>
         </article>

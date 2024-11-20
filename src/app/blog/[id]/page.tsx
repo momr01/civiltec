@@ -1,54 +1,23 @@
-
+import { fetchBlogItem } from "@/lib/actions";
+import Image from "next/image";
 import React from "react";
 
 interface SingleBlogParams {
   id: string;
 }
 
-interface BlogDetailsProps {
-  params: { id: string };
-  searchParams: {
-    title: string;
-    images: string;
-    video: string;
-    createdAt: string;
-  };
-}
-
-
-
-const SingleBlogPage = async ({ params, searchParams }: BlogDetailsProps) => {
-  
-  //console.log(id);
-  //console.log(params);
-
+const SingleBlogPage = async ({ params }: { params: SingleBlogParams }) => {
   const { id } = params;
-  const { title, images, video, createdAt } = searchParams;
-
- // const parsedImages = JSON.parse(images); // Deserializar las imágenes
-
- console.log(id)
- console.log(searchParams)
-
-
+  const item = await fetchBlogItem(id);
 
   return (
     <section className="pt-64">
       <h2 className="uppercase text-mainBlue font-bold text-3xl text-center">
-        proyecto beth - casa modular
+        {item?.title}
       </h2>
       <div className="my-14">
-        <p className="text-lg text-justify">
-          Las casas modulares originalmente no cubrían las necesidades de todos,
-          siendo casas pequeñas y con medidas insuficientes. Civiltec diseño la
-          casa modular expandible, ahorran tiempo de obra, materiales, energía,
-          sedentarismo, con productos sustentables, ecológicos y duraderos. Es
-          una vivienda amplia para toda la familia, con grandes dimensiones,
-          puede ser transportada y colocada en el día. La tecnología utilizada,
-          es un mecanismo nuevo, novedoso y que incorporamos gracias al proyecto
-          de profesionales dedicados al avance en la construcción. Civiltec
-          modulares se expande, una vez que llega a obra, la misma se transforma
-          en una vivienda familiar.
+        <p className="text-lg text-justify leading-8">
+         {item?.description}
         </p>
       </div>
       <div className="flex justify-center">
@@ -60,13 +29,26 @@ const SingleBlogPage = async ({ params, searchParams }: BlogDetailsProps) => {
           width={720}
           controlsList="nodownload"
           controls
+          loop
           preload="none"
+          autoPlay={true}
+          
         >
-          <source src="/video/blog/proyectoBethVideo.mp4" type="video/mp4" />
+          <source src={item?.video} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <div></div>
+      <div className="grid grid-cols-2 gap-4 mt-32 mb-40">
+        {item?.images.map((img, index) => (
+          <div key={index} className="flex items-center justify-center">
+          <Image
+         // key={index}
+          src={img}
+          alt={`${img}-${index}`}
+          />
+          </div>
+        ))}
+      </div>
     </section>
   );
 };

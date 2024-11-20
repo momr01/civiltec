@@ -12,7 +12,8 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  const isNotHomePage = pathname.includes("blog");
+  const isNotHomePage =
+    pathname.includes("blog") || pathname.includes("nosotros");
 
   useEffect(() => {
     if (window.scrollY > 0) {
@@ -49,8 +50,11 @@ const Header = () => {
         } containerBase`}
     >
       <Link className={styles.logoLink} href={"/"}>
-        <Image src={scrolled ? logoBlack : !isNotHomePage ? logoWhite : logoBlack} alt="logo" width={200} />
-     
+        <Image
+          src={scrolled ? logoBlack : !isNotHomePage ? logoWhite : logoBlack}
+          alt="logo"
+          width={200}
+        />
       </Link>
       <nav
         className={`${styles.nav}

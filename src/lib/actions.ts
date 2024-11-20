@@ -1,5 +1,7 @@
 "use server";
 
+import { blogItems } from "@/data/blogItems";
+
 // import { Message } from "@/models/message";
 // import { connectToDB } from "./db";
 
@@ -24,5 +26,15 @@ export const sendContactForm = async (formData: FormData) => {
   } catch (err: unknown) {
     console.log(err);
     return { status: "error", message: "Error al intentar enviar el mensaje." };
+  }
+};
+
+export const fetchBlogItem = async (id: string) => {
+  try {
+    const blogItem = await blogItems.find((item) => item.id === id);
+    return blogItem;
+  } catch (err) {
+    console.log(err);
+    throw new Error("Failed to fetch blog item!");
   }
 };
