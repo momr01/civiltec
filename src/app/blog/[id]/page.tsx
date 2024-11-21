@@ -1,10 +1,8 @@
+import { SingleBlogParams } from "@/interfaces/iSingleBlogParams";
 import { fetchBlogItem } from "@/lib/actions";
 import Image from "next/image";
 import React from "react";
 
-interface SingleBlogParams {
-  id: string;
-}
 
 const SingleBlogPage = async ({ params }: { params: SingleBlogParams }) => {
   const { id } = params;
@@ -22,10 +20,6 @@ const SingleBlogPage = async ({ params }: { params: SingleBlogParams }) => {
       </div>
       <div className="flex justify-center">
         <video
-          /**
-          width="320"
-          height="240"
-           */
           width={720}
           controlsList="nodownload"
           controls
@@ -42,7 +36,6 @@ const SingleBlogPage = async ({ params }: { params: SingleBlogParams }) => {
         {item?.images.map((img, index) => (
           <div key={index} className="flex items-center justify-center">
           <Image
-         // key={index}
           src={img}
           alt={`${img}-${index}`}
           />
