@@ -2,15 +2,22 @@
 import React from "react";
 import { Footer as FooterFBR } from "flowbite-react";
 import Image from "next/image";
-import { customThemeFooter } from "./customTheme";
+import { customThemeFooter, whiteThemeFooter } from "./customTheme";
 import { logoBlack, logoMOMR } from "@/assets/img/logo/logo";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   // const pathname = usePathname();
   //const isProjectsPage = pathname.includes("proyectos");
 
+  const pathname = usePathname();
+  const isProjectsPage = pathname.includes("proyectos");
+
   return (
-    <FooterFBR container theme={customThemeFooter}>
+    <FooterFBR
+      container
+      theme={isProjectsPage ? whiteThemeFooter : customThemeFooter}
+    >
       <div
         className="w-full text-center
           mb-24 lg:mb-10"
@@ -37,7 +44,9 @@ const Footer = () => {
             <FooterFBR.Link href="#">Contact</FooterFBR.Link>
           </FooterFBR.LinkGroup> */}
         </div>
-        <FooterFBR.Divider className="border-white" />
+        <FooterFBR.Divider
+          className={`${isProjectsPage ? "border-black" : "border-white"}`}
+        />
 
         <FooterFBR.Copyright
           href="#"

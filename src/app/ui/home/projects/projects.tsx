@@ -5,10 +5,13 @@ import MainTitle from "../../components/mainTitle/mainTitle";
 import ProjectsContainer from "../../projects/projectsContainer/projectsContainer";
 import BtnMore from "../../components/btnMore/btnMore";
 import styles from "./projects.module.css";
+import { useRouter } from "next/navigation";
 
 const Projects = () => {
+  const router = useRouter();
+
   const handleNewPage = () => {
-    console.log("holis");
+    router.push("/proyectos");
   };
 
   return (
@@ -17,7 +20,14 @@ const Projects = () => {
 
       <ProjectsContainer limit={3} />
       <div className={styles.btnContainer}>
-        <BtnMore text="ver más" onClick={handleNewPage} moreHeight={true} moreWidth={false} isGreen={true} textIsWhite={false} />
+        <BtnMore
+          text="ver más"
+          onClick={handleNewPage}
+          moreHeight={true}
+          moreWidth={false}
+          isGreen={true}
+          textIsWhite={false}
+        />
       </div>
     </section>
   );

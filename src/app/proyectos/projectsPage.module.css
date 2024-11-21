@@ -1,0 +1,21 @@
+.section {
+  @apply pb-52;
+  /* @apply bg-gradient-to-b from-mainGreen from-0% via-[#CAE5D7] via-74% to-white to-100%; */
+  background: linear-gradient(
+    to bottom,
+    var(--tw-gradient-to) 0%,
+    #C7DFAE 19%,
+    #A4CB7C 50%,
+    #B1D28E 78%,
+    var(--tw-gradient-to) 100%
+  );
+  --tw-gradient-to: white;
+}
+
+.container {
+  @apply mt-20;
+}
+
+.mainTitle {
+  @apply uppercase text-3xl text-center;
+}

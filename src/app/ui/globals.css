@@ -40,10 +40,15 @@ html {
 
 section {
   @apply baseContainer;
+  @apply pt-52;
 }
 
 header {
   @apply md:px-10;
   @apply lg:px-20;
   @apply 2xl:px-80;
+}
+
+.titleCenter {
+  @apply uppercase text-center text-3xl mb-20 font-bold;
 }

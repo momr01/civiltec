@@ -6,5 +6,10 @@ const customThemeFooter: CustomFlowbiteTheme["footer"] = {
   },
 };
 
+const whiteThemeFooter: CustomFlowbiteTheme["footer"] = {
+  root: {
+    base: "w-full rounded-none bg-white shadow dark:bg-gray-800 md:flex md:items-center md:justify-between",
+  },
+};
 
-export { customThemeFooter };
+export { customThemeFooter, whiteThemeFooter };

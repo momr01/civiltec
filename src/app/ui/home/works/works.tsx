@@ -19,6 +19,7 @@ import React from "react";
 import MainTitle from "../../components/mainTitle/mainTitle";
 import BtnMore from "../../components/btnMore/btnMore";
 import { importAllImages } from "@/lib/functions";
+import { useRouter } from "next/navigation";
 //import Masonry from "react-masonry-css";
 // pages/tu-pagina.js
 
@@ -35,9 +36,10 @@ const Works = () => {
     700: 2, // Para pantallas pequeñas
     500: 1, // Para pantallas muy pequeñas
   };*/
+  const router = useRouter();
 
   const handleNewPage = () => {
-    console.log("buenas");
+    router.push("/obras");
   };
 
   return (

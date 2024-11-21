@@ -3,8 +3,15 @@
 import React from "react";
 import MainTitle from "../../components/mainTitle/mainTitle";
 import BtnMore from "../../components/btnMore/btnMore";
+import { useRouter } from "next/navigation";
 
 const Us = () => {
+  const router = useRouter();
+
+  const handleNewPage = () => {
+    router.push("/nosotros");
+  };
+
   return (
     <section id="us">
       <MainTitle text="nosotros" color="black" />
@@ -16,7 +23,7 @@ const Us = () => {
       <div className="flex justify-center mt-20">
         <BtnMore
           text="más información"
-          onClick={() => console.log("mas")}
+          onClick={handleNewPage}
           moreHeight={true}
           moreWidth={false}
           isGreen={false}
