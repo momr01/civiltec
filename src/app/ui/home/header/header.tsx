@@ -13,7 +13,9 @@ const Header = () => {
   const router = useRouter();
   const pathname = usePathname();
   const isNotHomePage =
-    pathname.includes("blog") || pathname.includes("nosotros");
+    pathname.includes("blog") ||
+    pathname.includes("nosotros") ||
+    pathname.includes("obras");
   //||
   // pathname.includes("proyectos");
   const isProjectsPage = pathname.includes("proyectos");
@@ -54,14 +56,28 @@ const Header = () => {
     >
       <Link className={styles.logoLink} href={"/"}>
         <Image
-          src={scrolled ? logoBlack : isProjectsPage ? logoBlack : !isNotHomePage ? logoWhite : logoBlack}
+          src={
+            scrolled
+              ? logoBlack
+              : isProjectsPage
+              ? logoBlack
+              : !isNotHomePage
+              ? logoWhite
+              : logoBlack
+          }
           alt="logo"
           width={200}
         />
       </Link>
       <nav
         className={`${styles.nav}
-        ${isProjectsPage ? styles.navBlack : !isNotHomePage ? styles.navWhite : styles.navBlack}
+        ${
+          isProjectsPage
+            ? styles.navBlack
+            : !isNotHomePage
+            ? styles.navWhite
+            : styles.navBlack
+        }
         ${scrolled ? styles.navBlack : styles.navWhite} `}
       >
         <div className={styles.itemsContainer}>
