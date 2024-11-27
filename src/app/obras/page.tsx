@@ -55,6 +55,8 @@ style={{
                         display: "block",
                         width: "100%",
                       }}
+                      width={500}
+                      height={500}
                     />
                   </div>
                 );

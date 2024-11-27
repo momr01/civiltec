@@ -29,7 +29,8 @@ const importAllImages = (requireContext: __WebpackModuleApi.RequireContext) => {
   requireContext.keys().forEach((fileName) => {
     // console.log(fileName)
     const key = fileName.replace("./", "").replace(".jpg", "");
-    images[key] = requireContext(fileName);
+    //images[key] = requireContext(fileName);
+    images[key] = requireContext(fileName).default.src; // Extrae solo la URL (serializable)
   });
   //console.log(images)
   return images;
