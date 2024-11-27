@@ -33,6 +33,7 @@ html {
 }
 
 .baseContainer {
+  @apply px-5;
   @apply md:px-10;
   @apply lg:px-20 lg:py-20;
   @apply 2xl:px-80;
@@ -40,7 +41,8 @@ html {
 
 section {
   @apply baseContainer;
-  @apply pt-52;
+  @apply pt-5;
+  @apply lg:pt-52;
 }
 
 header {

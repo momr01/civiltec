@@ -1,5 +1,6 @@
 .mainContainer {
-  @apply bg-gray-100 py-10 rounded-[50px];
+  @apply bg-gray-100 py-10 rounded-[40px];
+  @apply lg:rounded-[50px];
 }
 
 .itemsContainer {
