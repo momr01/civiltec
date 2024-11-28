@@ -1,5 +1,5 @@
 .aboutSection {
-  @apply flex flex-col gap-5  z-20 bg-white rounded-b-[40px] pt-5;
+  @apply flex flex-col gap-5  z-20 bg-white rounded-b-[40px] pt-5 lg:pt-32;
   @apply lg:rounded-b-[100px];
 }
 

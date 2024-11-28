@@ -11,7 +11,7 @@ const images = importAllImages(
 
 const WorksPage = () => {
   return (
-    <div className="pt-60">
+    <div className="lg:pt-60 pt-40">
       <MainTitle text="obras" color="black" />
       <article>
         <Box
@@ -19,13 +19,19 @@ const WorksPage = () => {
             width: "100%",
             //  minHeight: 829
           }}
+        
         >
-          <Masonry columns={3} spacing={1}>
+          <div className="flex justify-center lg:justify-normal">
+          <Masonry columns={2} spacing={1}>
             {/* {itemData.map((item, index) => ( */}
             {Object.keys(images).map((key, index) => {
              
                 return (
-                  <div key={index}>
+                  <div key={index}
+                  
+                  
+                  
+                  >
                     {/* <Label>{index + 1}</Label> */}
                     {/* <img
 srcSet={`${item.img}?w=162&auto=format&dpr=2 2x`}
@@ -63,6 +69,8 @@ style={{
               
             })}
           </Masonry>
+          </div>
+       
         </Box>
       </article>
     </div>

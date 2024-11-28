@@ -10,7 +10,7 @@ const Blog = () => {
   return (
     <section id="blog" className={styles.blogSection}>
       <MainTitle text="blog" color="white" />
-      <div className="w-[85%] mx-auto">
+      <div className="w-[90%] lg:w-[85%] mx-auto">
         <p className="text-justify lg:text-lg text-white font-bold tracking-wider">
           La tecnología avanza en todos los ámbitos, generando posibilidades,
           alternativas y soluciones en todos los rubros. <br />

@@ -1,5 +1,5 @@
 .container {
-    @apply flex flex-col gap-5;
+    @apply flex flex-col lg:gap-5 gap-2;
      /* gap-7 lg:gap-10; */
 }
 
@@ -13,5 +13,5 @@
 }
 
 .text {
-    @apply font-semibold text-base md:text-lg;
+    @apply font-semibold text-sm md:text-lg;
 }

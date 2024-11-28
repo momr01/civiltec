@@ -38,8 +38,8 @@ const ContactInfo = () => {
     <div
     //className="flex flex-col md:flex-row md:justify-around lg:flex-col lg:justify-normal"
     >
-      <div className="mb-10">
-        <h3 className="text-3xl mb-2">Hablemos</h3>
+      <div className="lg:mb-10 mb-5">
+        <h3 className="lg:text-3xl text-2xl mb-2">Hablemos</h3>
         <p className="text-lg">Enviame tu consulta:</p>
       </div>
 

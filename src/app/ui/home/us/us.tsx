@@ -20,7 +20,7 @@ const Us = () => {
         Nos atraen los desafíos, generar obras de alto valor, no sólo económico
         sino también humano y social.
       </p>
-      <div className="flex justify-center mt-20">
+      <div className="flex justify-center mt-10 lg:mt-20">
         <BtnMore
           text="más información"
           onClick={handleNewPage}

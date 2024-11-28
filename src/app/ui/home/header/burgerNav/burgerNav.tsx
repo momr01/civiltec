@@ -1,7 +1,7 @@
 "use client";
 import { INavItem } from "@/interfaces/iNavItems";
 import Image from "next/image";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import styles from "./burgerNav.module.css";
 import { logoBlack } from "@/assets/img/logo/logo";
@@ -15,6 +15,15 @@ function BurgerNav({
 }) {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
+  const isNotHomePage =
+    pathname.includes("proyectos") ||
+    pathname.includes("obras") ||
+    pathname.includes("blog") ||
+    pathname.includes("nosotros");
+
+  //||
+  // pathname.includes("proyectos");
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -32,18 +41,32 @@ function BurgerNav({
     <div className={styles.container}>
       <button onClick={toggleMenu} className={styles.burgerBtn}>
         <div
-          className={`${styles.burgerBtnLineTransform} ${
-            scrolled ? styles.burgerBtnLineBlack : styles.burgerBtnLineWhite
+          className={`${styles.burgerBtnLineTransform}
+         
+          ${
+            isNotHomePage
+              ? styles.burgerBtnLineBlack
+              : scrolled
+              ? styles.burgerBtnLineBlack
+              : styles.burgerBtnLineWhite
           } ${isOpen ? styles.burgerLine1Open : ""}`}
         ></div>
         <div
           className={`${styles.burgerBtnLineMb} ${
-            scrolled ? styles.burgerBtnLineBlack : styles.burgerBtnLineWhite
+            isNotHomePage
+              ? styles.burgerBtnLineBlack
+              : scrolled
+              ? styles.burgerBtnLineBlack
+              : styles.burgerBtnLineWhite
           } ${isOpen ? styles.burgerLine2Open : ""}`}
         ></div>
         <div
           className={`${styles.burgerBtnLines} ${
-            scrolled ? styles.burgerBtnLineBlack : styles.burgerBtnLineWhite
+            isNotHomePage
+              ? styles.burgerBtnLineBlack
+              : scrolled
+              ? styles.burgerBtnLineBlack
+              : styles.burgerBtnLineWhite
           } ${isOpen ? styles.burgerLine3Open : ""}`}
         ></div>
       </button>

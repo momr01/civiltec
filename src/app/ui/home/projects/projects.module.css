@@ -8,6 +8,7 @@
   );
   --tw-gradient-from: var(--green);
   --tw-gradient-to: white;
+  /* @apply px-10; */
 }
 
 .btnContainer {

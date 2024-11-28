@@ -2,7 +2,7 @@ import { FaCheckCircle } from "react-icons/fa";
 
 const CheckedList = ({ description }: { description: string }) => {
   return (
-    <div className="flex gap-10 items-center px-5 mb-5">
+    <div className="flex lg:gap-10 gap-5 items-center lg:px-5 mb-5">
       <div>
         <FaCheckCircle size={40} />
       </div>

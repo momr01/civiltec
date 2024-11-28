@@ -16,8 +16,8 @@ const UsPage = () => {
       <h2 className="uppercase text-mainBlue font-bold text-3xl text-center">
         sobre nosotros
       </h2>
-      <div className="lg:my-14 grid lg:grid-cols-2 gap-20 my-8">
-        <div className="flex flex-col gap-16">
+      <div className="lg:my-14 grid lg:grid-cols-2 lg:gap-20 gap-5 my-8">
+        <div className="flex flex-col lg:gap-16 gap-8">
           <p className="text-lg text-justify leading-8 font-medium tracking-widest">
             Aplicamos la tecnología, la suma de habilidades, métodos y procesos
             que nos permitan Diseñar, Crear y Construir tus objetivos con apoyo
@@ -34,17 +34,17 @@ const UsPage = () => {
         <h2 className="uppercase text-mainBlue font-bold text-3xl">
           ¿por qué elegirnos?
         </h2>
-        <p className="text-lg text-justify leading-8 font-medium tracking-widest mt-16">
+        <p className="text-lg text-justify leading-8 font-medium tracking-widest lg:mt-16 mt-7">
           Nuestros modelos son personalizados, ya que contamos con una oficina
           de Arquitectura por lo que diseñamos la casa que siempre soñaste según
           tus necesidades.
         </p>
-        <div className="grid lg:grid-cols-2 mt-14">
+        <div className="grid lg:grid-cols-2 lg:mt-14 mt-7">
           {choseUsList.map((item, index) => (
             <CheckedList key={index} description={item.content} />
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-10 mt-20">
+        <div className="grid grid-cols-2 lg:gap-10 gap-3 lg:mt-20 mt-10">
           <Image src={us03} alt="us03.jpg" />
           <Image src={us04} alt="us04.jpg" />
         </div>
@@ -54,10 +54,10 @@ const UsPage = () => {
         <h2 className="uppercase text-mainBlue font-bold text-3xl">
           servicio creativo
         </h2>
-        <p className="text-lg text-justify leading-8 font-medium tracking-widest mt-16 uppercase">
+        <p className="text-lg text-justify leading-8 font-medium tracking-widest lg:mt-16 mt-7 uppercase">
           todo comienza con una idea, ¡con tu idea!
         </p>
-        <div className="flex lg:justify-between flex-col lg:flex-row mt-16 mb-52">
+        <div className="flex lg:justify-between flex-col lg:flex-row lg:mt-16 mt-8 lg:mb-52 mb-32 gap-5 lg:gap-0">
           {servicesList.map((item, index) => (
             <CreativeService key={index} service={item} />
           ))}
@@ -112,7 +112,7 @@ interface IServiceItem {
 
 const CreativeService = ({ service }: { service: IServiceItem }) => {
   return (
-    <div className="flex bg-gray-300 w-[390px] rounded-2xl p-3 gap-3">
+    <div className="flex bg-gray-300 lg:w-[390px] rounded-2xl p-3 gap-3">
       <div>
         <Image
           src={service.logo}

@@ -1,5 +1,5 @@
 .container {
-    @apply mt-20;
+    @apply mt-10;
     @apply md:mx-10;
     @apply lg:mt-0 lg:mx-0 lg:w-[50%];
     @apply xl:w-1/3;
