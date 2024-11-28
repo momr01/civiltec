@@ -41,7 +41,7 @@ html {
 
 section {
   @apply baseContainer;
-  @apply pt-5;
+  @apply pt-32;
   @apply lg:pt-52;
 }
 

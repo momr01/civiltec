@@ -8,4 +8,5 @@
     );
     --tw-gradient-from: var(--blue);
     --tw-gradient-to: white;
+    @apply pb-10 lg:pb-0;
   }

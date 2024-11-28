@@ -20,7 +20,7 @@ const BtnMore = ({
   return (
     <button
       className={`${styles.btn} ${moreHeight ? "h-16" : "h-12"} ${
-        moreWidth ? "w-1/2" : "w-1/3"
+        moreWidth ? "w-1/2" : "w-full lg:w-1/3"
       } ${
         isGreen
           ? "bg-mainGreen hover:bg-greenDark"

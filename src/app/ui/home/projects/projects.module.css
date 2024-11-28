@@ -11,5 +11,6 @@
 }
 
 .btnContainer {
-  @apply flex justify-center mt-20;
+  @apply flex justify-center mt-10;
+  @apply lg:mt-20;
 }

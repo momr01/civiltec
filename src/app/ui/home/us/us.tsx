@@ -13,10 +13,10 @@ const Us = () => {
   };
 
   return (
-    <section id="us">
+    <section id="us" className="pb-10 lg:pb-0">
       <MainTitle text="nosotros" color="black" />
 
-      <p className="uppercase text-lg text-center tracking-wider w-[80%] mx-auto font-semibold">
+      <p className="uppercase lg:text-lg text-center tracking-wider lg:w-[80%] mx-auto font-semibold">
         Nos atraen los desafíos, generar obras de alto valor, no sólo económico
         sino también humano y social.
       </p>

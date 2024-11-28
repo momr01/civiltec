@@ -44,7 +44,7 @@ const Works = () => {
 
   return (
     <div className="bg-mainBlue">
-      <section id="works" className="pb-60 rounded-b-[100px] bg-white">
+      <section id="works" className="lg:pb-60 pb-20 rounded-b-[40px] lg:rounded-b-[100px] bg-white">
         <MainTitle text="obras" color="black" />
         {/* <div
         className="grid grid-flow-dense gap-0 w-full h-full"

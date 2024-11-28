@@ -9,12 +9,12 @@ const SingleBlogPage = async ({ params }: { params: SingleBlogParams }) => {
   const item = await fetchBlogItem(id);
 
   return (
-    <section className="pt-64">
+    <section className="pt-48 lg:pt-64">
       <h2 className="uppercase text-mainBlue font-bold text-3xl text-center">
         {item?.title}
       </h2>
-      <div className="my-14">
-        <p className="text-lg text-justify leading-8">{item?.description}</p>
+      <div className="lg:my-14 my-8">
+        <p className="lg:text-lg text-justify leading-8">{item?.description}</p>
       </div>
       {/* <div className="flex justify-center">
     <video
@@ -31,7 +31,7 @@ const SingleBlogPage = async ({ params }: { params: SingleBlogParams }) => {
     </video>
   </div> */}
       <VideoPlayer videoSrc={item?.video || ""} />
-      <div className="grid grid-cols-2 gap-4 mt-32 mb-40">
+      <div className="grid grid-cols-2 gap-4 lg:mt-32 mt-14 lg:mb-40 mb-20">
         {item?.images.map((img, index) => (
           <div key={index} className="flex items-center justify-center">
             <Image src={img} alt={`${img}-${index}`} />

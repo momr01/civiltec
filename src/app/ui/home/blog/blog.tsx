@@ -11,7 +11,7 @@ const Blog = () => {
     <section id="blog" className={styles.blogSection}>
       <MainTitle text="blog" color="white" />
       <div className="w-[85%] mx-auto">
-        <p className="text-justify text-lg text-white font-bold tracking-wider">
+        <p className="text-justify lg:text-lg text-white font-bold tracking-wider">
           La tecnología avanza en todos los ámbitos, generando posibilidades,
           alternativas y soluciones en todos los rubros. <br />
           La construcción tradicional está transformándose, con estas
@@ -21,7 +21,7 @@ const Blog = () => {
         </p>
       </div>
 
-      <div className="flex justify-around my-20">
+      <div className="flex lg:flex-row lg:justify-around flex-col lg:my-20 my-10 items-center lg:items-baseline gap-10 lg:gap-0">
         {blogItems.map((item, index) => (
           <BlogCard key={index} item={item} />
         ))}

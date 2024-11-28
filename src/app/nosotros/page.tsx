@@ -12,11 +12,11 @@ import { GoDotFill } from "react-icons/go";
 
 const UsPage = () => {
   return (
-    <section className="pt-64">
+    <section className="lg:pt-64 pt-40">
       <h2 className="uppercase text-mainBlue font-bold text-3xl text-center">
         sobre nosotros
       </h2>
-      <div className="my-14 grid grid-cols-2 gap-20">
+      <div className="lg:my-14 grid lg:grid-cols-2 gap-20 my-8">
         <div className="flex flex-col gap-16">
           <p className="text-lg text-justify leading-8 font-medium tracking-widest">
             Aplicamos la tecnología, la suma de habilidades, métodos y procesos
@@ -39,7 +39,7 @@ const UsPage = () => {
           de Arquitectura por lo que diseñamos la casa que siempre soñaste según
           tus necesidades.
         </p>
-        <div className="grid grid-cols-2 mt-14">
+        <div className="grid lg:grid-cols-2 mt-14">
           {choseUsList.map((item, index) => (
             <CheckedList key={index} description={item.content} />
           ))}
@@ -57,7 +57,7 @@ const UsPage = () => {
         <p className="text-lg text-justify leading-8 font-medium tracking-widest mt-16 uppercase">
           todo comienza con una idea, ¡con tu idea!
         </p>
-        <div className="flex justify-between mt-16 mb-52">
+        <div className="flex lg:justify-between flex-col lg:flex-row mt-16 mb-52">
           {servicesList.map((item, index) => (
             <CreativeService key={index} service={item} />
           ))}

@@ -22,7 +22,7 @@ const BlogCard = ({ item }: { item: IBlogItem }) => {
       <div className="flex justify-center mb-3 items-end">
         <Link
           href={`/blog/${item.id}`}
-          className={`flex justify-center items-center font-bold hover:text-white transition-all ease-in-out duration-500 h-12 w-1/2 bg-mainGreen hover:bg-greenDark
+          className={`flex justify-center items-center font-bold hover:text-white transition-all ease-in-out duration-500 h-12 w-full lg:w-1/2 bg-mainGreen hover:bg-greenDark rounded-[25px] lg:rounded-none
             `}
         >
           {/* <BtnMore

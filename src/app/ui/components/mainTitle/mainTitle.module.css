@@ -1,3 +1,4 @@
 .text {
-  @apply text-3xl uppercase text-center font-bold mb-32;
+  @apply text-3xl uppercase text-center font-bold mb-10;
+  @apply lg:mb-32;
 }
