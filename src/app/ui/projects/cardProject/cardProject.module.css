@@ -11,6 +11,7 @@
   
   .cardContainer {
     @apply overflow-hidden relative cursor-pointer flex justify-center items-center h-[500px] w-full max-w-[600px] border;
+    @apply mx-auto;
     @apply md:h-[700px];
     @apply lg:h-[600px];
     @apply 2xl:h-[700px];

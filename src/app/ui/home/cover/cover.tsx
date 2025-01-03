@@ -15,7 +15,8 @@ const Cover = () => {
         //objectFit="cover"
         // layout="fill"
         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-        className={`${styles.imgZoomEffect} object-[37%_100%] md:object-center   object-cover`} />
+        // className={`${styles.imgZoomEffect} object-[37%_100%] md:object-center   object-cover`} />
+        className={`${styles.imgZoomEffect} object-[65%_100%] md:object-center   object-cover`} />
       </div>
     </div>
   );

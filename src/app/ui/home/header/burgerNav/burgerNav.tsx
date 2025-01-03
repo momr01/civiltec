@@ -4,7 +4,7 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import React, { useState } from "react";
 import styles from "./burgerNav.module.css";
-import { logoBlack } from "@/assets/img/logo/logo";
+import { logoFigure } from "@/assets/img/logo/logo";
 
 function BurgerNav({
   navItems,
@@ -86,7 +86,7 @@ function BurgerNav({
         }`}
       >
         <div className={styles.menuLogoContainer}>
-          <Image src={logoBlack} alt="logo" />
+          <Image src={logoFigure} alt="logo" />
         </div>
 
         <ul className={styles.menuNav}>
